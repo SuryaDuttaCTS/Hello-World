@@ -23,10 +23,13 @@ const Navbar = ({ title, icon }) => {
         <Link to='/'>Home</Link>
       </li>
       <li>
+        <Link to='/shopList'>Shoplist</Link>
+      </li>
+      <li>
         <Link to='/about'>About</Link>
       </li>
       <li>
-        <a onClick={onLogout} href='#!'>
+        <a onClick={onLogout} href='/login#!'>
           <i className='fas fa-sign-out-alt'></i>
           <span className='hide-sm'>Logout</span>
         </a>
@@ -59,12 +62,12 @@ const Navbar = ({ title, icon }) => {
 
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.string
+  icon: PropTypes.string,
 };
 
 Navbar.defaultProps = {
   title: "Contact Keeper",
-  icon: "fas fa-id-card-alt"
+  icon: "fas fa-id-card-alt",
 };
 
 export default Navbar;
